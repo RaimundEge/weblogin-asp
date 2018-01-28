@@ -1,0 +1,26 @@
+﻿@page
+@model DemoASP.Pages.IndexModel
+@{
+    ViewData["page"] = "index";
+    ViewData["user"] = Model.store.user;
+}
+
+<div class="container">
+    <h3 class="display-3">Welcome to the Demo Web Application:</h3>
+    <p> @Model.store.retrieveMessage() </p>
+    <div>
+    @if (Model.store.user == "") 
+    {
+    <p>
+        To access our valuable content you need to 
+        <a href="Login"><button><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in</button></a>
+    </p>
+    }
+    else
+    { 
+    <p>
+        You can proceed to our valuable content <a href="Content"><button>content</button></a>
+    </p>
+    }
+    </div>
+</div>

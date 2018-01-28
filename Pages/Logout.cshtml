@@ -1,0 +1,11 @@
+﻿@page
+@model DemoASP.Pages.LogoutModel
+@{
+    ViewData["page"] = "logout";
+    ViewData["user"] = Model.store.user;
+}
+
+<div class="container">
+    <h3>You are now logged out</h3>
+        <p> @Model.store.message </p>
+</div>
